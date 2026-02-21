@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.vanphuc.vaultitemlogger.mixin.client",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ContainerUpdateMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

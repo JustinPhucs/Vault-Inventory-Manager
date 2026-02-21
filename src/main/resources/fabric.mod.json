@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "vault-item-logger",
+	"version": "${version}",
+	"name": "Vault Item Logger",
+	"description": "Mod hỗ trợ tự động quét và ghi lại danh sách vật phẩm trong rương (Vault) và xuất log định dạng JSON.",
+	"authors": [
+		"VanPhuc"
+	],
+	"contact": {
+		"sources": "https://github.com/JustinPhucs/Vault-Inventory-Manager"
+	},
+	"license": "MIT",
+	"icon": "assets/vault-item-logger/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.vanphuc.vaultitemlogger.VaultItemLogger"
+		],
+		"client": [
+			"com.vanphuc.vaultitemlogger.VaultItemLoggerClient"
+		],
+		"modmenu": [
+			"com.vanphuc.vaultitemlogger.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"vault-item-logger.mixins.json",
+		{
+			"config": "vault-item-logger.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*",
+		"yet_another_config_lib_v3": ">=3.8.2"
+	}
+}
